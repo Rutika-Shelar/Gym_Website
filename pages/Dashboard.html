@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <div class="flex">
+    <!--  Navbar -->
+    <div id="navbar" class="w-[200px]"></div>
+    <script>
+      fetch('../components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        });
+    </script>
+
+    <!-- Main Content -->
+    <div class="flex-1 container mx-auto p-6">
+      <!-- Welcome Section -->
+      <h1 class="text-2xl font-bold mb-4">Welcome Admin!</h1>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+       
+        <div class="bg-white shadow-md p-6 rounded-lg text-center relative h-[180px] ">
+          <div class="absolute inset-0 bg-cover bg-center opacity-2" style="background-image: url('../assets/class.jpg');"></div>
+            <p class="text-white absolute bottom-2 left-2 font-poppins bold font-[800]">Class</p>
+            <p class="text-2xl text-white font-bold absolute bottom-2 right-2 font-[600] font-poppins">4</p>
+        </div>
+      
+        <div class="bg-white shadow-md p-6 rounded-lg text-center relative h-[180px] ">
+          <div class="absolute inset-0 bg-cover bg-center opacity-2" style="background-image: url('../assets/class.jpg');"></div>
+          <p class="text-white absolute bottom-2 left-2 font-poppins bold font-[800]">Class</p>
+          <p class="text-2xl text-white font-bold absolute bottom-2 right-2 font-[600] font-poppins">8</p>
+        </div>
+
+        <div class="bg-white shadow-md p-6 rounded-lg text-center relative h-[180px] ">
+          <div class="absolute inset-0 bg-cover bg-center opacity-2" style="background-image: url('../assets/class.jpg');"></div>
+          <p class="text-white absolute bottom-2 left-2 font-poppins bold font-[800]">Class</p>
+          <p class="text-2xl text-white font-bold absolute bottom-2 right-2 font-[600] font-poppins">20</p>
+        </div>
+
+        <div class="bg-white shadow-md p-6 rounded-lg text-center relative h-[180px]">
+          <div class="absolute inset-0 bg-cover bg-center opacity-2" style="background-image: url('../assets/class.jpg');"></div>
+          <p class="text-white absolute bottom-2 left-2 font-poppins bold font-[600]">Class</p>
+        </div>
+
+      </div>
+
+      <!-- New Registrations Section -->
+       <div class="flex">
+      <div class=" flex-1 bg-white shadow-md gap-2 mr-2 rounded-lg p-6">
+        <h2 class="text-xl font-bold mb-4">New Registrations</h2>
+        <div class="overflow-x-auto">
+          <table class="table-auto w-full text-left text-gray-800">
+            <thead>
+              <tr class="bg-gray-200">
+                <th class="p-2">Sr. No</th>
+                <th class="p-2">Full Name</th>
+                <th class="p-2">Contact No.</th>
+                <th class="p-2">Class</th>
+                <th class="p-2">Period</th>
+                <th class="p-2">Time Slot</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-2">1</td>
+                <td class="p-2">Rohan Jadhav</td>
+                <td class="p-2">1234567890</td>
+                <td class="p-2">Yoga</td>
+                <td class="p-2">2 Months</td>
+                <td class="p-2">08:00-09:00</td>
+              </tr>
+
+              <tr>
+                <td class="p-2">1</td>
+                <td class="p-2">Rohan Jadhav</td>
+                <td class="p-2">1234567890</td>
+                <td class="p-2">Yoga</td>
+                <td class="p-2">2 Months</td>
+                <td class="p-2">08:00-09:00</td>
+              </tr>
+
+              <tr>
+                <td class="p-2">1</td>
+                <td class="p-2">Rohan Jadhav</td>
+                <td class="p-2">1234567890</td>
+                <td class="p-2">Yoga</td>
+                <td class="p-2">2 Months</td>
+                <td class="p-2">08:00-09:00</td>
+              </tr>
+
+              <tr>
+                <td class="p-2">1</td>
+                <td class="p-2">Rohan Jadhav</td>
+                <td class="p-2">1234567890</td>
+                <td class="p-2">Yoga</td>
+                <td class="p-2">2 Months</td>
+                <td class="p-2">08:00-09:00</td>
+              </tr>
+
+              <tr>
+                <td class="p-2">1</td>
+                <td class="p-2">Rohan Jadhav</td>
+                <td class="p-2">1234567890</td>
+                <td class="p-2">Yoga</td>
+                <td class="p-2">2 Months</td>
+                <td class="p-2">08:00-09:00</td>
+              </tr>
+
+              <tr>
+                <td class="p-2">1</td>
+                <td class="p-2">Rohan Jadhav</td>
+                <td class="p-2">1234567890</td>
+                <td class="p-2">Yoga</td>
+                <td class="p-2">2 Months</td>
+                <td class="p-2">08:00-09:00</td>
+              </tr>
+
+              <tr>
+                <td class="p-2">1</td>
+                <td class="p-2">Rohan Jadhav</td>
+                <td class="p-2">1234567890</td>
+                <td class="p-2">Yoga</td>
+                <td class="p-2">2 Months</td>
+                <td class="p-2">08:00-09:00</td>
+              </tr>
+
+              <tr>
+                <td class="p-2">1</td>
+                <td class="p-2">Rohan Jadhav</td>
+                <td class="p-2">1234567890</td>
+                <td class="p-2">Yoga</td>
+                <td class="p-2">2 Months</td>
+                <td class="p-2">08:00-09:00</td>
+              </tr>
+
+              <tr>
+                <td class="p-2">1</td>
+                <td class="p-2">Rohan Jadhav</td>
+                <td class="p-2">1234567890</td>
+                <td class="p-2">Yoga</td>
+                <td class="p-2">2 Months</td>
+                <td class="p-2">08:00-09:00</td>
+              </tr>
+
+              <tr>
+                <td class="p-2">1</td>
+                <td class="p-2">Rohan Jadhav</td>
+                <td class="p-2">1234567890</td>
+                <td class="p-2">Yoga</td>
+                <td class="p-2">2 Months</td>
+                <td class="p-2">08:00-09:00</td>
+              </tr>
+
+
+              <!-- Additional rows here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Total Trainee Section -->
+      <div class=" flex-1 mt-8 bg-grey shadow-md rounded-lg p-6">
+        <h2 class="text-xl font-bold mb-4">Total Trainee</h2>
+        <div class="flex justify-center items-center">
+          <div class="w-48 h-48 rounded-full border-8 border-orange-400 flex items-center justify-center">
+            <p class="text-2xl font-bold">80</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </div>
+</body>
+</html>
