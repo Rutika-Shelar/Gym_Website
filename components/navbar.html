@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-[294px] h-[1000px] bg-gray-800 text-white opacity-100">
+      <div class="p-4 flex items-center space-x-3">
+        <!-- Logo -->
+        <div class="relative w-[153px] h-[97px]">
+          <img src="logo.PNG" alt="Logo" class="w-full h-full">
+        </div>
+        
+
+      </div>
+      <nav class="mt-6">
+        <ul>
+          <!-- Main menu item -->
+          <li class="group">
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700">
+              <span class="w-6 h-6 flex justify-center items-center bg-gray-900 rounded-full mr-2">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m-7 6h10M3 6h11m-7 6h7" />
+                </svg>
+              </span>
+              Admin
+            </a>
+          </li>
+
+          <!-- Dropdown menu -->
+          <li class="relative group">
+            <button class="flex justify-between items-center px-4 py-2 w-full text-left hover:bg-gray-700">
+              <div class="flex items-center">
+                <span class="w-6 h-6 flex justify-center items-center bg-gray-900 rounded-full mr-2">
+                  <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6h18M3 10h18m-9 4h9" />
+                  </svg>
+                </span>
+                All Members
+              </div>
+              <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <ul class="absolute hidden group-hover:block left-0 bg-gray-700 text-sm text-white w-full z-10">
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-600">Add Trainee</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-600 text-orange-400">Dropped Trainee</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-600">Member Details</a>
+              </li>
+            </ul>
+          </li>
+          
+          <!-- Other menu items -->
+          <li>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700">
+              <span class="w-6 h-6 flex justify-center items-center bg-gray-900 rounded-full mr-2">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </span>
+              Trainer
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700">
+              <span class="w-6 h-6 flex justify-center items-center bg-gray-900 rounded-full mr-2">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m0 0h.01M8 12v-2a4 4 0 118 0v2m-8 0h.01" />
+                </svg>
+              </span>
+              Trainee
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700">
+              <span class="w-6 h-6 flex justify-center items-center bg-gray-900 rounded-full mr-2">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v2a2 2 0 002 2h2a2 2 0 002-2v-2m0-6V9a3 3 0 10-6 0v2m-2 0a9 9 0 1118 0v2H5z" />
+                </svg>
+              </span>
+              Health Updates
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700">
+              <span class="w-6 h-6 flex justify-center items-center bg-gray-900 rounded-full mr-2">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c2.21 0 4-1.79 4-4S14.21 0 12 0 8 1.79 8 4s1.79 4 4 4z" />
+                </svg>
+              </span>
+              Member Payments
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700">
+              <span class="w-6 h-6 flex justify-center items-center bg-gray-900 rounded-full mr-2">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12l4-4 4 4m0 0v8m0-8H8" />
+                </svg>
+              </span>
+              Plan
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</body>
+</html>

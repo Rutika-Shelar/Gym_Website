@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Center Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../scripts/login.js"></script>
+</head>
+<body class="h-screen bg-gray-900 flex items-center justify-center">
+  <!-- Main Container -->
+
+  <div class="absolute inset-0">
+    <img
+      src="../assets/background.png"
+      alt="Fitness Background"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  </div>
+  <div class="relative w-full h-full">
+    <!-- Background Image -->
+    
+    <!-- Logo -->
+    <div class="flex justify-center mb-6">
+      <img src="../assets/logo.png" alt="Fitness Logo" class="h-20 md:h-60">
+    </div>
+    
+    <div class="relative max-w-sm md:max-w-md lg:max-w-lg mx-auto bg-white bg-opacity-15 p-6 md:p-8 rounded-lg shadow-lg">
+      <!-- Login Card --> 
+
+      <!-- Form -->
+      <form>
+        <!-- Username Input -->
+        <div class="mb-4">
+          <label for="username" class="block text-white font-bold mb-2">Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter Username"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm md:text-base"
+          />
+        </div>
+
+        <!-- Password Input -->
+        <div class="mb-4 relative">
+          <label for="password" class="block text-white font-bold mb-2">Password</label>
+          <div class="relative">
+            
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter Password"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm md:text-base"
+            />
+            
+            <img
+              src="../assets/eye.png"
+              alt="Toggle Password Visibility"
+              id="togglePassword"
+              class="absolute inset-y-3  right-2 h-4 w-6 cursor-pointer"
+            />
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-6 text-sm md:text-base">
+          <a href="#" class="text-[#23A6EF] hover:underline mb-2 md:mb-0 font-[400]">Sign up</a>
+          <a href="#" class="text-[#FF7414] hover:underline font-[400]">Forgot Password</a>
+        </div>
+
+        <!-- Login Button -->
+        <button
+          type="submit"
+          class="w-[144px] mx-auto block bg-[#CD821D] text-white py-2 rounded-[5px]"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', () => {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+
+      // Optionally, change the image if needed for better UX
+      togglePassword.src = type === 'password' ? '../assets/eye.png' : '../assets/eye-closed.png';
+    });
+  </script>
+</body>
+</html>
