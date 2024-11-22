@@ -1,95 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sidebar Menu</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Dropdown Menu Styling */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu {
+      display: none;
+    }
+  </style>
 </head>
-
 <body class="bg-gray-100 font-sans">
-
-
   <div class="flex">
     <!-- Sidebar -->
-    <aside class="w-[200px] h-[1000px] bg-[#191919] text-white opacity-100">
+    <aside class="w-[200px] h-screen bg-[#191919] text-white">
       <div class="p-4 flex items-center space-x-3">
         <!-- Logo -->
         <div class="relative w-[153px] h-[97px]">
-          <img src="../assets/logo.png" alt="Logo" class="w-[153px] h-[160px]">
+          <img src="../assets/logo.png" alt="Logo" class="w-[153px] h-[97px]">
         </div>
-
-
       </div>
-      <nav class="mt-6">
+      <nav class="mt-0">
         <ul>
-          <!-- Main menu item -->
-           <!-- Dropdown menu -->
-           <li class="relative group">
-            <button class="flex justify-between items-center px-4 py-2 w-full text-left hover:bg-gray-700">
+          <!-- Dropdown menu for Admin -->
+          <li class="dropdown">
+            <button
+              class="flex justify-between items-center px-4 py-2 w-full text-left hover:bg-gray-700"
+            >
               <div class="flex items-center">
                 <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                  <img src="../assets/admin.png" alt="admin Icon" class="w-4 h-4">
+                  <img src="../assets/admin.png" alt="Admin Icon" class="w-4 h-4">
                 </span>
-               Admin
+                Admin
               </div>
-              <svg class="w-4 h-4 text-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <ul class="absolute hidden group-hover:block left-0 bg-gray-700 text-sm text-white w-full z-10">
+            <ul class="dropdown-menu pl-8 space-y-1">
               <li>
-                <li>
-                  <a href="../pages/staff.html" class="flex items-center px-4 py-2 hover:text-orange-400 whitespace-nowrap">
-                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                      <img src="../assets/icons/Staff.png" alt="Staff Icon" class="w-4 h-4">
-                    </span>
-                    Staff/Trainer
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:text-orange-400 whitespace-nowrap">
-                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                      <img src="../assets/icons/membership.png" alt="Staff Icon" class="w-4 h-4">
-                    </span>
-                    Membership
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:text-orange-400 whitespace-nowrap">
-                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                      <img src="../assets/icons/Alll_classes.png" alt="Staff Icon" class="w-4 h-4">
-                    </span>
-                    All Classes
-                  </a>
-                </li>
-
-             <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:text-orange-400 whitespace-nowrap">
-                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                      <img src="../assets/icons/Attendance.png" alt="Staff Icon" class="w-4 h-4">
-                    </span>
-                    Attendance
-                  </a>
-                </li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Staff/trainers</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Membership</a>
+              </li>
+              <li>
+                <a href="all-classes.html" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">All Classes</a>
+              </li>
+              <li>
+                <a href="attendance.html" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Attendance</a>
+              </li>
             </ul>
           </li>
 
-
-
-
-
-
-
-          <!-- Dropdown menu -->
-          <li class="relative group">
-            <button class="flex justify-between items-center px-4 py-2 w-full text-left hover:bg-gray-700">
+          <!-- Dropdown menu for All Members -->
+          <li class="dropdown">
+            <button
+              class="flex justify-between items-center px-4 py-2 w-full text-left hover:bg-gray-700"
+            >
               <div class="flex items-center">
                 <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                  <img src="../assets/all_members.png" alt="all members Icon" class="w-4 h-4">
+                  <img src="../assets/all_members.png" alt="All Members Icon" class="w-4 h-4">
                 </span>
                 All Members
               </div>
@@ -97,34 +73,17 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <ul class="absolute hidden group-hover:block left-0 bg-gray-700 text-sm text-white w-full z-10">
+            <ul class="dropdown-menu pl-8 space-y-1">
               <li>
-                <a href="#" class="flex items-center px-4 py-2 hover:text-orange-400 whitespace-nowrap">
-                  <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                    <img src="../assets/icons/add_trainee.png" alt="add Icon" class="w-4 h-4">
-                  </span>
-                  Add Trainee
-                </a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">add Trainee</a>
               </li>
-
-               <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:text-orange-400 whitespace-nowrap">
-                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                      <img src="../assets/icons/Dropped_trainee.png" alt="dropped Icon" class="w-4 h-4">
-                    </span>
-                    Dropped trainee
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:text-orange-400 whitespace-nowrap">
-                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                      <img src="../assets/icons/Member_details.png" alt="Membership Icon" class="w-4 h-4">
-                    </span>
-                   Member Details
-                  </a>
-                </li>
-
+              <li>
+                <a href="all-classes.html" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">drop Trainee</a>
+              </li>
+              <li>
+                <a href="attendance.html" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">memeber details</a>
+              </li>
+              </li>
             </ul>
           </li>
 
@@ -133,7 +92,7 @@
             <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
               <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
                 <img src="../assets/Trainer.png" alt="Trainer Icon" class="w-4 h-4">
-              </span>
+                </span>
               Trainer
             </a>
           </li>
@@ -141,8 +100,17 @@
           <li>
             <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
               <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
+                <img src="../assets/Tranee.png" alt="Trainer Icon" class="w-4 h-4">
+                </span>
+              Trainee
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
+              <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
                 <img src="../assets/Health.png" alt="Health Icon" class="w-4 h-4">
-              </span>
+                </span>
               Health Updates
             </a>
           </li>
@@ -151,7 +119,7 @@
             <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
               <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
                 <img src="../assets/payments_icon.png" alt="Member payments Icon" class="w-4 h-4">
-              </span>
+                </span>
               Member Payments
             </a>
           </li>
@@ -160,16 +128,15 @@
             <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
               <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
                 <img src="../assets/plan.png" alt="Plan Icon" class="w-4 h-4">
-              </span>
+                </span>
               Plan
             </a>
           </li>
-
-
         </ul>
       </nav>
     </aside>
   </div>
-</body>
 
+  
+</body>
 </html>

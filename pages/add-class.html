@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Class</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Main Container -->
+  <div class="flex h-screen">
+
+    <!-- Sidebar -->
+    <aside class="bg-gray-800 text-white w-64 p-4">
+      <div class="text-center mb-6">
+        <img src="your-logo.png" alt="Logo" class="w-16 mx-auto">
+        <h2 class="text-xl font-bold mt-2">Fitness</h2>
+      </div>
+      <nav>
+        <ul>
+          <li class="mb-2">
+            <a href="admin-dashboard.html" class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-700">
+              <span>Admin</span>
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="staff-trainers.html" class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-700">
+              <span>Staff/Trainers</span>
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="membership.html" class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-700">
+              <span>Membership</span>
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="all-classes.html" class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-700">
+              <span>All Classes</span>
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="attendance.html" class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-700">
+              <span>Attendance</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+      <!-- Navbar -->
+      <header class="flex justify-between items-center bg-white p-4 shadow rounded-md">
+        <h1 class="text-xl font-bold">Welcome Admin!</h1>
+        <div class="flex items-center gap-4">
+          <button>
+            <img src="notification-icon.png" alt="Notifications" class="w-6 h-6">
+          </button>
+          <div class="flex items-center gap-2">
+            <img src="profile-placeholder.png" alt="User" class="w-8 h-8 rounded-full">
+            <span>Username</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Add Class Section -->
+      <section class="mt-6 bg-white p-6 shadow rounded-md">
+        <h2 class="text-lg font-bold mb-4">Add Class</h2>
+        <div class="overflow-x-auto">
+          <table class="table-auto w-full border-collapse border border-gray-300">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border border-gray-300 p-2">Class Name</th>
+                <th class="border border-gray-300 p-2">Class Trainer</th>
+                <th class="border border-gray-300 p-2">Start Time</th>
+                <th class="border border-gray-300 p-2">End Time</th>
+                <th class="border border-gray-300 p-2">Description</th>
+                <th class="border border-gray-300 p-2">Batch</th>
+                <th class="border border-gray-300 p-2">Day</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 p-2">Yoga</td>
+                <td class="border border-gray-300 p-2">Trainer Name</td>
+                <td class="border border-gray-300 p-2">08:00 AM</td>
+                <td class="border border-gray-300 p-2">09:00 AM</td>
+                <td class="border border-gray-300 p-2">
+                  From a yoga class, you'll learn to improve flexibility, build strength, enhance balance, and develop...
+                </td>
+                <td class="border border-gray-300 p-2">Morning</td>
+                <td class="border border-gray-300 p-2">Saturday, Sunday</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-2">
+                  <input type="text" placeholder="Enter name" class="border-gray-300 rounded-md p-2 w-full">
+                </td>
+                <td class="border border-gray-300 p-2">
+                  <input type="text" placeholder="Trainer Name" class="border-gray-300 rounded-md p-2 w-full">
+                </td>
+                <td class="border border-gray-300 p-2">
+                  <input type="time" class="border-gray-300 rounded-md p-2 w-full">
+                </td>
+                <td class="border border-gray-300 p-2">
+                  <input type="time" class="border-gray-300 rounded-md p-2 w-full">
+                </td>
+                <td class="border border-gray-300 p-2">
+                  <input type="text" placeholder="Description" class="border-gray-300 rounded-md p-2 w-full">
+                </td>
+                <td class="border border-gray-300 p-2">
+                  <input type="text" placeholder="Enter Batch" class="border-gray-300 rounded-md p-2 w-full">
+                </td>
+                <td class="border border-gray-300 p-2">
+                  <select class="border-gray-300 rounded-md p-2 w-full">
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="flex justify-end mt-4 gap-4">
+          <button class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600">Save</button>
+          <button class="bg-gray-200 px-4 py-2 rounded-md hover:bg-gray-300">Reset</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>

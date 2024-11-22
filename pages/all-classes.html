@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Classes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-[200px] h-[100vh] bg-[#191919] text-white">
+            <div class="p-4 flex items-center space-x-3">
+              <!-- Logo -->
+              <div class="relative w-[153px] h-[97px]">
+                <img src="../assets/logo.png" alt="Logo" class="w-[153px] h-[97px]">
+              </div>
+            </div>
+            <nav class="mt-0">
+              <ul>
+                <!-- Dropdown menu for Admin -->
+                <li>
+                  <button
+                    class="flex justify-between items-center px-4 py-2 w-full text-left hover:bg-gray-700"
+                    onclick="toggleDropdown('admin-menu')"
+                  >
+                    <div class="flex items-center">
+                      <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
+                        <img src="../assets/admin.png" alt="Admin Icon" class="w-4 h-4">
+                      </span>
+                      Admin
+                    </div>
+                    <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <ul id="admin-menu" class="hidden pl-8 space-y-1">
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Staff/trainers</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Membership</a>
+                    </li>
+                    <li>
+                      <a href="all-classes.html" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">
+                        All Classes
+                      </a>
+                      
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Attendance</a>
+                    </li>
+                  </ul>
+                </li>
+      
+                <!-- Dropdown menu for All Members -->
+                <li>
+                  <button
+                    class="flex justify-between items-center px-4 py-2 w-full text-left hover:bg-gray-700"
+                    onclick="toggleDropdown('members-menu')"
+                  >
+                    <div class="flex items-center">
+                      <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
+                        <img src="../assets/all_members.png" alt="All Members Icon" class="w-4 h-4">
+                      </span>
+                      All Members
+                    </div>
+                    <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <ul id="members-menu" class="hidden pl-8 space-y-1">
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Add Trainee</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Dropped Trainee</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Member Details</a>
+                    </li>
+                  </ul>
+                </li>
+      
+                <!-- Other menu items -->
+                <li>
+                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
+                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
+                      <img src="../assets/Trainer.png" alt="Trainer Icon" class="w-4 h-4">
+                      </span>
+                    Trainer
+                  </a>
+                </li>
+      
+                <li>
+                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
+                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
+                      <img src="../assets/Tranee.png" alt="Trainer Icon" class="w-4 h-4">
+                      </span>
+                    Trainee
+                  </a>
+                </li>
+      
+      
+                <li>
+                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
+                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
+                      <img src="../assets/Health.png" alt="Health Icon" class="w-4 h-4">
+                      </span>
+                    Health Updates
+                  </a>
+                </li>
+      
+                <li>
+                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
+                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
+                      <img src="../assets/payments_icon.png" alt="Member payments Icon" class="w-4 h-4">
+                      </span>
+                    Member Payments
+                  </a>
+                </li>
+      
+                <li>
+                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
+                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
+                      <img src="../assets/plan.png" alt="Plan Icon" class="w-4 h-4">
+                      </span>
+                    Plan
+                  </a>
+                </li>
+              </ul>
+            </nav>
+      <!-- Your existing sidebar content -->
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-6 bg-gray-100">
+      <h1 class="text-xl font-bold mb-4">Welcome Admin!</h1>
+
+      <div class="bg-white rounded shadow-md p-6">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-semibold">All Classes</h2>
+          <button onclick="window.location.href='add-class.html'" class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+            Add Class
+        </button>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse border border-gray-300 text-left">
+            <thead>
+              <tr class="bg-gray-200">
+                <th class="border border-gray-300 px-4 py-2">Sr. No</th>
+                <th class="border border-gray-300 px-4 py-2">Class Name</th>
+                <th class="border border-gray-300 px-4 py-2">Class Trainer</th>
+                <th class="border border-gray-300 px-4 py-2">Start Time</th>
+                <th class="border border-gray-300 px-4 py-2">End Time</th>
+                <th class="border border-gray-300 px-4 py-2">Description</th>
+                <th class="border border-gray-300 px-4 py-2">Batch</th>
+                <th class="border border-gray-300 px-4 py-2">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-gray-100">
+                <td class="border border-gray-300 px-4 py-2">1</td>
+                <td class="border border-gray-300 px-4 py-2">Yoga</td>
+                <td class="border border-gray-300 px-4 py-2">Trainer Name</td>
+                <td class="border border-gray-300 px-4 py-2">08:00 AM</td>
+                <td class="border border-gray-300 px-4 py-2">09:00 AM</td>
+                <td class="border border-gray-300 px-4 py-2">
+                  From a yoga class, you'll learn to improve flexibility, build
+                  strength, enhance balance, and develop...
+                </td>
+                <td class="border border-gray-300 px-4 py-2">Morning</td>
+                <td class="border border-gray-300 px-4 py-2">
+                  <button class="text-blue-500 hover:underline">Edit</button>
+                  <button class="text-red-500 hover:underline ml-2">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function toggleDropdown(id) {
+      const dropdown = document.getElementById(id);
+      dropdown.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
