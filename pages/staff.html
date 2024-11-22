@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>staff</title>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="flex">
+        <!--  Navbar -->
+        <div id="navbar" class="w-[200px]"></div>
+        <script>
+          fetch('../components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('navbar').innerHTML = data;
+            });  
+        </script>
+
+            <!-- Main Content -->
+    <div class="flex-1 container mx-auto p-6">
+        <!-- Welcome Section -->
+      <!-- Top Navbar -->
+      <div class="flex justify-between items-center p-4 mb-6">
+       
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold mb-4">Welcome Admin!</h1>
+          </div>
+        
+        <div class="flex items-center space-x-4 gap-4">
+        <div class="relative"></div>
+             
+           
+          <button class="relative">
+         
+          <img src="../assets/icons/notification.png" alt="Notification" class="w-6 h-6 text-gray-600">
+          </button>
+          <button>
+            <img src="../assets/icons/settings.png" alt="Message" class="w-6 h-6 text-gray-600">
+          </button>
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-600">Username</span>
+            <img src="../assets/profile_photo.jpg" alt="Profile Photo" class="w-8 h-8 rounded-full">
+          </div>
+        </div>
+        
+      </div>
+        
+    
+      <div class="flex">
+        <div class=" flex-1 bg-white shadow-md gap-2 mr-2 rounded-lg p-6 overflow-y-scroll">
+        
+          <h2 class="text-xl font-bold mb-4">New Registrations</h2>
+          <div class="overflow-x-auto">
+            <table class="table-auto w-full text-left text-gray-800">
+              <thead>
+                <tr class="bg-gray-200">
+                  <th class="p-2">Photo</th>
+                  <th class="p-2">Staff Name</th>
+                  <th class="p-2">Contact No.</th>
+                  <th class="p-2">Profession</th>
+                  <th class="p-2">Experience</th>
+                  <th class="p-2">Email</th>
+                  <th class="p-2">Batch</th>
+                  <th class="p-2">Details</th>
+                  <th class="p-2">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+
+
+                <tr>
+                <td class="p-2">
+                    <img src="../assets/user2.png" alt="Profile Photo" class="w-8 h-8 rounded-full">
+                </td>
+                  <td class="p-2">Staff  full Name</td>
+                  <td class="p-2">1234567890</td>
+                  <td class="p-2">Yoga</td>
+                  <td class="p-2">2 Yrs</td>
+                  <td class="p-2">abc@gmail.com</td>
+                  <td class="p-2">Morning</td>
+                  <td class="p-2">View Details</td>
+                  <td class="p-2">
+                    <div class="flex space-x-2">
+                      <img src="../assets/icons/edit.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                      <img src="../assets/icons/delete.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                    </div>
+                  </td>
+
+                </tr>
+  
+                 <tr>
+                <td class="p-2">
+                    <img src="../assets/user1.png" alt="Profile Photo" class="w-8 h-8 rounded-full">
+                </td>
+                  <td class="p-2">Staff  full Name</td>
+                  <td class="p-2">1234567890</td>
+                  <td class="p-2">Yoga</td>
+                  <td class="p-2">2 Yrs</td>
+                  <td class="p-2">abc@gmail.com</td>
+                  <td class="p-2">Morning</td>
+                  <td class="p-2">View Details</td>
+                  <td class="p-2">
+                    <div class="flex space-x-2">
+                      <img src="../assets/icons/edit.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                      <img src="../assets/icons/delete.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                    </div>
+                  </td>
+
+                </tr>
+  
+                <tr>
+                    <td class="p-2">
+                        <img src="../assets/user2.png" alt="Profile Photo" class="w-8 h-8 rounded-full">
+                    </td>
+                      <td class="p-2">Staff  full Name</td>
+                      <td class="p-2">1234567890</td>
+                      <td class="p-2">Yoga</td>
+                      <td class="p-2">2 Yrs</td>
+                      <td class="p-2">abc@gmail.com</td>
+                      <td class="p-2">Morning</td>
+                      <td class="p-2">View Details</td>
+                      <td class="p-2">
+                        <div class="flex space-x-2">
+                          <img src="../assets/icons/edit.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                          <img src="../assets/icons/delete.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                        </div>
+                      </td>
+    
+                    </tr>
+  
+                    <tr>
+                        <td class="p-2">
+                            <img src="../assets/user1.png" alt="Profile Photo" class="w-8 h-8 rounded-full">
+                        </td>
+                          <td class="p-2">Staff  full Name</td>
+                          <td class="p-2">1234567890</td>
+                          <td class="p-2">Yoga</td>
+                          <td class="p-2">2 Yrs</td>
+                          <td class="p-2">abc@gmail.com</td>
+                          <td class="p-2">Morning</td>
+                          <td class="p-2">View Details</td>
+                          <td class="p-2">
+                            <div class="flex space-x-2">
+                              <img src="../assets/icons/edit.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                              <img src="../assets/icons/delete.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                            </div>
+                          </td>
+        
+                        </tr>
+  
+                        <tr>
+                            <td class="p-2">
+                                <img src="../assets/user2.png" alt="Profile Photo" class="w-8 h-8 rounded-full">
+                            </td>
+                              <td class="p-2">Staff  full Name</td>
+                              <td class="p-2">1234567890</td>
+                              <td class="p-2">Yoga</td>
+                              <td class="p-2">2 Yrs</td>
+                              <td class="p-2">abc@gmail.com</td>
+                              <td class="p-2">Morning</td>
+                              <td class="p-2">View Details</td>
+                              <td class="p-2">
+                                <div class="flex space-x-2">
+                                  <img src="../assets/icons/edit.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                                  <img src="../assets/icons/delete.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                                </div>
+                              </td>
+            
+                            </tr>
+  
+                            <tr>
+                                <td class="p-2">
+                                    <img src="../assets/user1.png" alt="Profile Photo" class="w-8 h-8 rounded-full">
+                                </td>
+                                  <td class="p-2">Staff  full Name</td>
+                                  <td class="p-2">1234567890</td>
+                                  <td class="p-2">Yoga</td>
+                                  <td class="p-2">2 Yrs</td>
+                                  <td class="p-2">abc@gmail.com</td>
+                                  <td class="p-2">Morning</td>
+                                  <td class="p-2">View Details</td>
+                                  <td class="p-2">
+                                    <div class="flex space-x-2">
+                                      <img src="../assets/icons/edit.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                                      <img src="../assets/icons/delete.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                                    </div>
+                                  </td>
+                
+                                </tr>
+  
+                                <tr>
+                                    <td class="p-2">
+                                        <img src="../assets/user2.png" alt="Profile Photo" class="w-8 h-8 rounded-full">
+                                    </td>
+                                      <td class="p-2">Staff  full Name</td>
+                                      <td class="p-2">1234567890</td>
+                                      <td class="p-2">Yoga</td>
+                                      <td class="p-2">2 Yrs</td>
+                                      <td class="p-2">abc@gmail.com</td>
+                                      <td class="p-2">Morning</td>
+                                      <td class="p-2">View Details</td>
+                                      <td class="p-2">
+                                        <div class="flex space-x-2">
+                                          <img src="../assets/icons/edit.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                                          <img src="../assets/icons/delete.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                                        </div>
+                                      </td>
+                    
+                                    </tr>
+  
+                                    <tr>
+                                        <td class="p-2">
+                                            <img src="../assets/user1.png" alt="Profile Photo" class="w-8 h-8 rounded-full">
+                                        </td>
+                                          <td class="p-2">Staff  full Name</td>
+                                          <td class="p-2">1234567890</td>
+                                          <td class="p-2">Yoga</td>
+                                          <td class="p-2">2 Yrs</td>
+                                          <td class="p-2">abc@gmail.com</td>
+                                          <td class="p-2">Morning</td>
+                                          <td class="p-2">View Details</td>
+                                          <td class="p-2">
+                                            <div class="flex space-x-2">
+                                              <img src="../assets/icons/edit.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                                              <img src="../assets/icons/delete.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                                            </div>
+                                          </td>
+                        
+                                        </tr>
+  
+                                        <tr>
+                                            <td class="p-2">
+                                                <img src="../assets/user1.png" alt="Profile Photo" class="w-8 h-8 rounded-full">
+                                            </td>
+                                              <td class="p-2">Staff  full Name</td>
+                                              <td class="p-2">1234567890</td>
+                                              <td class="p-2">Yoga</td>
+                                              <td class="p-2">2 Yrs</td>
+                                              <td class="p-2">abc@gmail.com</td>
+                                              <td class="p-2">Morning</td>
+                                              <td class="p-2">View Details</td>
+                                              <td class="p-2">
+                                                <div class="flex space-x-2">
+                                                  <img src="../assets/icons/edit.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                                                  <img src="../assets/icons/delete.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                                                </div>
+                                              </td>
+                            
+                                            </tr>
+                                            <tr>
+                                                <td class="p-2">
+                                                    <img src="../assets/user2.png" alt="Profile Photo" class="w-8 h-8 rounded-full">
+                                                </td>
+                                                  <td class="p-2">Staff  full Name</td>
+                                                  <td class="p-2">1234567890</td>
+                                                  <td class="p-2">Yoga</td>
+                                                  <td class="p-2">2 Yrs</td>
+                                                  <td class="p-2">abc@gmail.com</td>
+                                                  <td class="p-2">Morning</td>
+                                                  <td class="p-2">View Details</td>
+                                                  <td class="p-2">
+                                                    <div class="flex space-x-2">
+                                                      <img src="../assets/icons/edit.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                                                      <img src="../assets/icons/delete.png" alt="Profile Photo" class="w-[18px] h-[20px]">
+                                                    </div>
+                                                  </td>
+                                
+                                                </tr>
+  
+  
+                <!-- Additional rows here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+  
+        
+      </div>
+    
+    
+    
+    
+    
+    
+    </div>
+</body>
+</html>
