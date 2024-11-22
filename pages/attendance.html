@@ -9,53 +9,15 @@
 <body class="bg-gray-100 font-sans">
   <div class="flex">
     <!-- Sidebar -->
-    <aside class="w-[200px] h-[100vh] bg-[#191919] text-white">
-      <div class="p-4 flex items-center space-x-3">
-        <!-- Logo -->
-        <div class="relative w-[153px] h-[97px]">
-          <img src="../assets/logo.png" alt="Logo" class="w-[153px] h-[97px]">
-        </div>
-      </div>
-      <nav class="mt-0">
-        <ul>
-          <!-- Your sidebar menu here -->
-          <li>
-            <button
-              class="flex justify-between items-center px-4 py-2 w-full text-left hover:bg-gray-700"
-              onclick="toggleDropdown('admin-menu')"
-            >
-              <div class="flex items-center">
-                <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                  <img src="../assets/admin.png" alt="Admin Icon" class="w-4 h-4">
-                </span>
-                Admin
-              </div>
-              <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <ul id="admin-menu" class="hidden pl-8 space-y-1">
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Staff/trainers</a>
-              </li>
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Membership</a>
-              </li>
-              <li>
-                <a href="all-classes.html" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">
-                  All Classes
-                </a>
-              </li>
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Attendance</a>
-              </li>
-            </ul>
-          </li>
-          <!-- Other menu items -->
-        </ul>
-      </nav>
-    </aside>
-
+    <div id="navbar" class="w-[200px]"></div>
+    <script>
+      fetch('../components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        });
+        
+    </script>
     <!-- Main Content -->
     <main class="flex-1 p-6">
       <header class="flex justify-between items-center bg-white p-4 shadow rounded-md">

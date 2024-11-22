@@ -9,142 +9,42 @@
 <body class="bg-gray-100 font-sans">
   <div class="flex">
     <!-- Sidebar -->
-    <aside class="w-[200px] h-[100vh] bg-[#191919] text-white">
-            <div class="p-4 flex items-center space-x-3">
-              <!-- Logo -->
-              <div class="relative w-[153px] h-[97px]">
-                <img src="../assets/logo.png" alt="Logo" class="w-[153px] h-[97px]">
-              </div>
-            </div>
-            <nav class="mt-0">
-              <ul>
-                <!-- Dropdown menu for Admin -->
-                <li>
-                  <button
-                    class="flex justify-between items-center px-4 py-2 w-full text-left hover:bg-gray-700"
-                    onclick="toggleDropdown('admin-menu')"
-                  >
-                    <div class="flex items-center">
-                      <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                        <img src="../assets/admin.png" alt="Admin Icon" class="w-4 h-4">
-                      </span>
-                      Admin
-                    </div>
-                    <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  <ul id="admin-menu" class="hidden pl-8 space-y-1">
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Staff/trainers</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Membership</a>
-                    </li>
-                    <li>
-                      <a href="all-classes.html" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">
-                        All Classes
-                      </a>
-                      
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Attendance</a>
-                    </li>
-                  </ul>
-                </li>
-      
-                <!-- Dropdown menu for All Members -->
-                <li>
-                  <button
-                    class="flex justify-between items-center px-4 py-2 w-full text-left hover:bg-gray-700"
-                    onclick="toggleDropdown('members-menu')"
-                  >
-                    <div class="flex items-center">
-                      <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                        <img src="../assets/all_members.png" alt="All Members Icon" class="w-4 h-4">
-                      </span>
-                      All Members
-                    </div>
-                    <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  <ul id="members-menu" class="hidden pl-8 space-y-1">
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Add Trainee</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Dropped Trainee</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-orange-400">Member Details</a>
-                    </li>
-                  </ul>
-                </li>
-      
-                <!-- Other menu items -->
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
-                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                      <img src="../assets/Trainer.png" alt="Trainer Icon" class="w-4 h-4">
-                      </span>
-                    Trainer
-                  </a>
-                </li>
-      
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
-                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                      <img src="../assets/Tranee.png" alt="Trainer Icon" class="w-4 h-4">
-                      </span>
-                    Trainee
-                  </a>
-                </li>
-      
-      
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
-                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                      <img src="../assets/Health.png" alt="Health Icon" class="w-4 h-4">
-                      </span>
-                    Health Updates
-                  </a>
-                </li>
-      
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
-                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                      <img src="../assets/payments_icon.png" alt="Member payments Icon" class="w-4 h-4">
-                      </span>
-                    Member Payments
-                  </a>
-                </li>
-      
-                <li>
-                  <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 whitespace-nowrap">
-                    <span class="w-6 h-6 flex justify-center items-center bg-[#191919] rounded-full mr-2">
-                      <img src="../assets/plan.png" alt="Plan Icon" class="w-4 h-4">
-                      </span>
-                    Plan
-                  </a>
-                </li>
-              </ul>
-            </nav>
-      <!-- Your existing sidebar content -->
-    </aside>
+    <div id="navbar" class="w-[200px] h-[1000px]"></div>
+    <script>
+      fetch('../components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        });   
+    </script>
 
     <!-- Main Content -->
     <div class="flex-1 p-6 bg-gray-100">
-      <h1 class="text-xl font-bold mb-4">Welcome Admin!</h1>
 
-      <div class="bg-white rounded shadow-md p-6">
-        <div class="flex justify-between items-center mb-4">
-          <h2 class="text-lg font-semibold">All Classes</h2>
-          <button onclick="window.location.href='add-class.html'" class="bg-blue-500 text-white px-4 py-2 rounded-lg">
-            Add Class
-        </button>
+      <div class="flex justify-between items-center p-4 mb-6">
+       
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold mb-4">Welcome Admin!</h1>
+          </div>
+        
+        <div class="flex items-center space-x-4 gap-4">
+        <div class="relative"></div>
+              
+          <button class="relative">
+         
+          <img src="../assets/icons/notification.png" alt="Notification" class="w-6 h-6 text-gray-600">
+          </button>
+          <button>
+            <img src="../assets/icons/settings.png" alt="Message" class="w-6 h-6 text-gray-600">
+          </button>
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-600">Username</span>
+            <img src="../assets/profile_photo.jpg" alt="Profile Photo" class="w-8 h-8 rounded-full">
+          </div>
         </div>
+      </div>
 
+      <section class="mt-6 bg-white p-6 shadow rounded-md">
         <div class="overflow-x-auto">
           <table class="w-full border-collapse border border-gray-300 text-left">
             <thead>
@@ -181,6 +81,7 @@
         </div>
       </div>
     </div>
+  </section>
   </div>
   <script>
     function toggleDropdown(id) {
