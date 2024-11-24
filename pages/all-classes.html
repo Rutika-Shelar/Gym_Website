@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Classes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="flex">
+    <!-- Sidebar -->
+    <div id="navbar" class="w-[200px] h-[1000px]"></div>
+    <script>
+      fetch('../components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        });   
+    </script>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-6 bg-gray-100">
+
+      <div class="flex justify-between items-center p-4 mb-6">
+       
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold mb-4">Welcome Admin!</h1>
+          </div>
+        
+        <div class="flex items-center space-x-4 gap-4">
+        <div class="relative"></div>
+              
+          <button class="relative">
+         
+          <img src="../assets/icons/notification.png" alt="Notification" class="w-6 h-6 text-gray-600">
+          </button>
+          <button>
+            <img src="../assets/icons/settings.png" alt="Message" class="w-6 h-6 text-gray-600">
+          </button>
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-600">Username</span>
+            <img src="../assets/profile_photo.jpg" alt="Profile Photo" class="w-8 h-8 rounded-full">
+          </div>
+        </div>
+      </div>
+
+      <section class="mt-6 bg-white p-6 shadow rounded-md">
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse border border-gray-300 text-left">
+            <thead>
+              <tr class="bg-gray-200">
+                <th class="border border-gray-300 px-4 py-2">Sr. No</th>
+                <th class="border border-gray-300 px-4 py-2">Class Name</th>
+                <th class="border border-gray-300 px-4 py-2">Class Trainer</th>
+                <th class="border border-gray-300 px-4 py-2">Start Time</th>
+                <th class="border border-gray-300 px-4 py-2">End Time</th>
+                <th class="border border-gray-300 px-4 py-2">Description</th>
+                <th class="border border-gray-300 px-4 py-2">Batch</th>
+                <th class="border border-gray-300 px-4 py-2">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-gray-100">
+                <td class="border border-gray-300 px-4 py-2">1</td>
+                <td class="border border-gray-300 px-4 py-2">Yoga</td>
+                <td class="border border-gray-300 px-4 py-2">Trainer Name</td>
+                <td class="border border-gray-300 px-4 py-2">08:00 AM</td>
+                <td class="border border-gray-300 px-4 py-2">09:00 AM</td>
+                <td class="border border-gray-300 px-4 py-2">
+                  From a yoga class, you'll learn to improve flexibility, build
+                  strength, enhance balance, and develop...
+                </td>
+                <td class="border border-gray-300 px-4 py-2">Morning</td>
+                <td class="border border-gray-300 px-4 py-2">
+                  <button class="text-blue-500 hover:underline">Edit</button>
+                  <button class="text-red-500 hover:underline ml-2">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  <script>
+    function toggleDropdown(id) {
+      const dropdown = document.getElementById(id);
+      dropdown.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
