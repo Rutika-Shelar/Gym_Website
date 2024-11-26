@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200 font-sans">
+
+  <!-- Main Container -->
+  <div class="flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 text-white">
+      <div class="p-6 text-center border-b border-gray-700">
+        <img src="https://via.placeholder.com/80" alt="Logo" class="mx-auto rounded-full">
+        <h1 class="mt-2 font-bold text-lg">FITNESS</h1>
+      </div>
+      <nav class="mt-4">
+        <ul>
+          <li class="px-4 py-2 hover:bg-gray-700"><a href="#">Admin</a></li>
+          <li class="px-4 py-2 hover:bg-gray-700"><a href="#">Staff/Trainers</a></li>
+          <li class="px-4 py-2 hover:bg-gray-700"><a href="#">Membership</a></li>
+          <li class="px-4 py-2 hover:bg-gray-700"><a href="#">All Classes</a></li>
+          <li class="px-4 py-2 bg-gray-700"><a href="#">Attendance</a></li>
+          <li class="px-4 py-2 hover:bg-gray-700"><a href="#">Health Updates</a></li>
+          <li class="px-4 py-2 hover:bg-gray-700"><a href="#">Plan</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Content Area -->
+    <main class="flex-1 bg-white p-8">
+      <!-- Header -->
+      <header class="flex justify-between items-center mb-8">
+        <h1 class="text-2xl font-bold">Welcome Admin!</h1>
+        <div class="flex items-center space-x-4">
+          <button class="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
+            <svg class="w-6 h-6 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a6 6 0 100 12 6 6 0 000-12zM8 8a1 1 0 112 0 1 1 0 01-2 0zm2 3a2 2 0 100 4 2 2 0 000-4z" />
+            </svg>
+          </button>
+          <img src="https://via.placeholder.com/40" alt="User" class="rounded-full w-10 h-10">
+        </div>
+      </header>
+
+      <!-- Attendance List -->
+      <section>
+        <h2 class="mb-4 text-lg font-semibold">Class List</h2>
+        <div class="bg-gray-100 p-4 rounded-md shadow-md mb-6">
+          <form class="grid grid-cols-5 gap-4">
+            <input type="date" class="col-span-1 p-2 border rounded-md" />
+            <select class="col-span-1 p-2 border rounded-md">
+              <option>Select Class</option>
+            </select>
+            <input type="time" class="col-span-1 p-2 border rounded-md" />
+            <input type="time" class="col-span-1 p-2 border rounded-md" />
+            <button class="col-span-1 bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+              View Attendance
+            </button>
+          </form>
+        </div>
+
+        <!-- Attendance Table -->
+        <div class="overflow-auto bg-white shadow-md rounded-md">
+          <table class="min-w-full text-left">
+            <thead class="bg-gray-200">
+              <tr>
+                <th class="p-4">Photo</th>
+                <th class="p-4">Name</th>
+                <th class="p-4">Attendance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b hover:bg-gray-50">
+                <td class="p-4">
+                  <img src="https://via.placeholder.com/40" alt="Staff" class="w-10 h-10 rounded-full">
+                </td>
+                <td class="p-4">Staff Full Name</td>
+                <td class="p-4 text-green-600">Present</td>
+              </tr>
+              <tr class="border-b hover:bg-gray-50">
+                <td class="p-4">
+                  <img src="https://via.placeholder.com/40" alt="Staff" class="w-10 h-10 rounded-full">
+                </td>
+                <td class="p-4">Staff Full Name</td>
+                <td class="p-4 text-red-600">Absent</td>
+              </tr>
+              <tr class="border-b hover:bg-gray-50">
+                <td class="p-4">
+                  <img src="https://via.placeholder.com/40" alt="Staff" class="w-10 h-10 rounded-full">
+                </td>
+                <td class="p-4">Staff Full Name</td>
+                <td class="p-4 text-green-600">Present</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

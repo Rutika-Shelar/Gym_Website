@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Admin Dashboard</title>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <div id="navbar" class="w-[200px]"></div>
+    <script>
+      fetch('../components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        });  
+    </script>
+
+    <!-- Main Content -->
+    <main class="flex-1 bg-white p-8">
+      <div id="header"></div>
+      <script>
+        fetch('../components/header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('header').innerHTML = data;
+          });
+      </script>
+
+      <section class="mt-8 bg-gray-100 p-6 rounded-lg shadow-md">
+        <h3 class="text-lg font-semibold mb-4">Add Trainee</h3>
+        
+        <!-- Horizontal line added here -->
+        <hr class="mb-6 border-gray-300">
+
+        <form class="grid grid-cols-2 gap-6">
+          <!-- Left Column -->
+          <div>
+            <div class="flex items-center mb-4">
+              <label for="name" class="w-[150px] text-gray-700 font-medium">Name</label>
+              <input type="text" id="name" class="w-[378px] h-[45px] border border-gray-300 rounded-[5px] px-3">
+            </div>
+            <div class="flex items-center mb-4">
+              <label for="dob" class="w-[150px] text-gray-700 font-medium">DOB</label>
+              <input type="date" id="dob" class="w-[378px] h-[45px] border border-gray-300 rounded-[5px] px-3">
+            </div>
+            <div class="flex items-center mb-4">
+              <label for="age" class="w-[150px] text-gray-700 font-medium">Age</label>
+              <input type="number" id="age" class="w-[378px] h-[45px] border border-gray-300 rounded-[5px] px-3">
+            </div>
+            <div class="flex items-center mb-4">
+              <label for="membership" class="w-[150px] text-gray-700 font-medium">Membership</label>
+              <select id="membership" class="w-[378px] h-[45px] border border-gray-300 rounded-[5px] px-3">
+                <option>Select Membership</option>
+              </select>
+            </div>
+            <div class="flex items-center mb-4">
+              <label for="next-payment" class="w-[150px] text-gray-700 font-medium">Next Payment  scheduled Date</label>
+              <input type="date" id="next-payment" class="w-[378px] h-[45px] border border-gray-300 rounded-[5px] px-3">
+            </div>
+            <div class="flex items-center mb-4">
+              <label for="personal-trainer" class="w-[150px] text-gray-700 font-medium">Trainer</label>
+              <select id="personal-trainer" class="w-[378px] h-[45px] border border-gray-300 rounded-[5px] px-3">
+                <option>Select Trainer</option>
+              </select>
+            </div>
+            <div class="flex items-center mb-4">
+              <label for="personal-trainer" class="w-[150px] text-gray-700 font-medium">Classes</label>
+              <select id="personal-trainer" class="w-[378px] h-[45px] border border-gray-300 rounded-[5px] px-3">
+                <option>Select class</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div>
+            <div class="flex items-center mb-4">
+              <label for="email" class="w-[150px] text-gray-700 font-medium">Email ID</label>
+              <input type="email" id="email" class="w-[378px] h-[45px] border border-gray-300 rounded-[5px] px-3">
+            </div>
+            <div class="flex items-center mb-4">
+              <label for="contact" class="w-[150px] text-gray-700 font-medium">Contact Number</label>
+              <input type="tel" id="contact" class="w-[378px] h-[45px] border border-gray-300 rounded-[5px] px-3">
+            </div>
+            <div class="flex items-center mb-4">
+              <label for="address" class="w-[150px] text-gray-700 font-medium">Address</label>
+              <textarea id="address" rows="3" class="w-[378px] h-[45px] border border-gray-300 rounded-[5px] px-3"></textarea>
+            </div>
+            <div class="flex items-center mb-4">
+              <label for="photo" class="w-[150px] text-gray-700 font-medium">Photo</label>
+              <div class="w-[292px] h-[40px] border border-gray-300 rounded-[2px] flex items-center justify-center text-gray-500 bg-gray-50">
+                <input type="file" id="photo" class="hidden">
+                <label for="photo" class="cursor-pointer">Upload or Drag Here</label>
+              </div>
+            </div>
+            <div class="flex items-center mb-4">
+              <label for="join-date" class="w-[150px] text-gray-700 font-medium">Join Date</label>
+              <input type="date" id="join-date" class="w-[378px] h-[45px] border border-gray-300 rounded-[5px] px-3">
+            </div>
+            <div class="flex items-center mb-4">
+              <label for="end-date" class="w-[150px] text-gray-700 font-medium">End Date</label>
+              <input type="date" id="end-date" class="w-[378px] h-[45px] border border-gray-300 rounded-[5px] px-3">
+            </div>
+          </div>
+        </form>
+
+        <!-- Buttons -->
+        <div class="mt-4">
+          <button class="bg-orange-500 text-white px-4 py-2 rounded-lg mr-2">Save</button>
+          <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg">Reset</button>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
